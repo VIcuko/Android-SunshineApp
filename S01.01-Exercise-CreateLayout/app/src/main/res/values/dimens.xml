@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="forecast_padding_text">16dp</dimen>
+    <dimen name="forecast_size_text">20sp</dimen>
+</resources>
