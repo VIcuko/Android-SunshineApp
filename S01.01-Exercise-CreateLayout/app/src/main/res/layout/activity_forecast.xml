@@ -33,6 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/hello_world"
+            android:padding="@dimen/forecast_padding_text"
             android:textSize="@dimen/forecast_padding_text" />
     </ScrollView>
 </FrameLayout>
