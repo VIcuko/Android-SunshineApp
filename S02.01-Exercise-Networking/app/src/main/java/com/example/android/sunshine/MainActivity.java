@@ -20,6 +20,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+import com.example.android.sunshine.data.SunshinePreferences;
 import com.example.android.sunshine.utilities.NetworkUtils;
 import com.example.android.sunshine.utilities.OpenWeatherJsonUtils;
 
@@ -73,10 +74,16 @@ public class MainActivity extends AppCompatActivity {
             mWeatherTextView.append(dummyWeatherDay + "\n\n\n");
         }*/
 
-        // TODO (9) Call loadWeatherData to perform the network request to get the weather
+        // TODO (9) Call loadWeatherData to perform the network request to get the weather - Done
+        loadWeatherData();
     }
 
-    // TODO (8) Create a method that will get the user's preferred location and execute your new AsyncTask and call it loadWeatherData
+    // TODO (8) Create a method that will get the user's preferred location and execute your new AsyncTask and call it loadWeatherData - Done
+    private void loadWeatherData(){
+        String location = SunshinePreferences.getPreferredWeatherLocation(this);
+        new FetchWeatherTask().execute(location);
+    }
+}
 
     // TODO (5) Create a class that extends AsyncTask to perform network requests - Done
 
