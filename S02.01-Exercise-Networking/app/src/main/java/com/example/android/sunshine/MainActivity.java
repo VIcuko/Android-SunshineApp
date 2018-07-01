@@ -79,17 +79,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // TODO (8) Create a method that will get the user's preferred location and execute your new AsyncTask and call it loadWeatherData - Done
-    private void loadWeatherData(){
+    private void loadWeatherData() {
         String location = SunshinePreferences.getPreferredWeatherLocation(this);
         new FetchWeatherTask().execute(location);
     }
-}
 
     // TODO (5) Create a class that extends AsyncTask to perform network requests - Done
 
     public class FetchWeatherTask extends AsyncTask<String, Void, String[]> {
 
-    // TODO (6) Override the doInBackground method to perform your network requests - Done
+        // TODO (6) Override the doInBackground method to perform your network requests - Done
         @Override
         protected String[] doInBackground(String... params) {
 
@@ -115,11 +114,11 @@ public class MainActivity extends AppCompatActivity {
                 return null;
             }
         }
-    // TODO (7) Override the onPostExecute method to display the results of the network request - Done
+        // TODO (7) Override the onPostExecute method to display the results of the network request - Done
 
         @Override
         protected void onPostExecute(String[] weatherData) {
-            if (weatherData != null){
+            if (weatherData != null) {
                 /*
                  * Iterate through the array and append the Strings to the TextView. The reason why we add
                  * the "\n\n\n" after the String is to give visual separation between each String in the
@@ -127,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
                  */
                 for (String weatherString : weatherData) {
                     mWeatherTextView.append((weatherString) + "\n\n\n");
+                }
             }
         }
     }
