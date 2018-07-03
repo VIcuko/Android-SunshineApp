@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    // TODO (7) Override onOptionsItemSelected to handle clicks on the refresh button
+    // TODO (7) Override onOptionsItemSelected to handle clicks on the refresh button - Done
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
