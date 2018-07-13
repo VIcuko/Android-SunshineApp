@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     // TODO (17) Extend RecyclerView.ViewHolder - Done
 
     // Within ForecastAdapterViewHolder ///////////////////////////////////////////////////////////
-    // TODO (18) Create a public final TextView variable called mWeatherTextView
+    // TODO (18) Create a public final TextView variable called mWeatherTextView - Done
 
     // TODO (19) Create a constructor for this class that accepts a View as a parameter - Done
     // TODO (20) Call super(view) within the constructor for ForecastAdapterViewHolder - Done
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
     // TODO (25) Within onCreateViewHolder, inflate the list item xml into a view - Done
     // TODO (26) Within onCreateViewHolder, return a new ForecastAdapterViewHolder with the above view passed in as a parameter - Done
 
-    // TODO (27) Override onBindViewHolder
+    // TODO (27) Override onBindViewHolder - Done
     // TODO (28) Set the text of the TextView to the weather for this list item's position
 
     // TODO (29) Override getItemCount

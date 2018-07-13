@@ -2,18 +2,18 @@ package com.example.android.sunshine;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.util.List;
-
 /**
  * Created by Vicuko on 11/7/18.
  */
 public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapterViewHolder>{
-    private List<String> mWeatherData;
+    private String[] mWeatherData;
+    private static final String TAG = ForecastAdapter.class.getSimpleName();
 
     public ForecastAdapter(){
 
@@ -34,7 +34,9 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.Foreca
 
     @Override
     public void onBindViewHolder(ForecastAdapter.ForecastAdapterViewHolder holder, int position) {
-
+        Log.d(TAG, "#" + position);
+        String weatherOnDay = mWeatherData[position];
+        holder.mWeatherTextView.setText(weatherOnDay);
     }
 
     @Override
@@ -51,4 +53,5 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.Foreca
             mWeatherTextView = (TextView) itemView.findViewById(R.id.tv_weather_data);
         }
     }
+
 }
