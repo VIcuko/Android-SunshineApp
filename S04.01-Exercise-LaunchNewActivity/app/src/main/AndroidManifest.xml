@@ -35,7 +35,6 @@
             </intent-filter>
         </activity>
         <!-- TODO (4) Configure DetailActivity's up button functionality -->
-        <activity android:name=".ChildActivity"></activity>
     </application>
 
 </manifest>
