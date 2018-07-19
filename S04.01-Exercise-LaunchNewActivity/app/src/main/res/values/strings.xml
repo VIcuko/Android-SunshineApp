@@ -147,4 +147,9 @@
     <!--Used by SunshinePreferences-->
     <!-- - - - - - - - - - - - - - -->
     <!--NONE-->
+
+    <!-- - - - - - - - - - - - - - -->
+    <!--Used by activity_child-->
+    <!-- - - - - - - - - - - - - - -->
+    <string name="default_text">This is a default text</string>
 </resources>
