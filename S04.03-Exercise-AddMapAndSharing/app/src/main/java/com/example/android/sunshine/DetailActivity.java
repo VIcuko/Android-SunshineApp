@@ -32,7 +32,7 @@ public class DetailActivity extends AppCompatActivity {
         }
     }
     // TODO (3) Create a menu with an item with id of action_share - Done
-    // TODO (4) Display the menu and implement the forecast sharing functionality
+    // TODO (4) Display the menu and implement the forecast sharing functionality - Done
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
