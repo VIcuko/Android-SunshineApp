@@ -119,8 +119,12 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapterOn
         Context context = this;
         Class destinationClass = DetailActivity.class;
         Intent intentToStartDetailActivity = new Intent(context, destinationClass);
-        // TODO (1) Pass the weather to the DetailActivity
-        startActivity(intentToStartDetailActivity);
+        // TODO (1) Pass the weather to the DetailActivity - Done
+        intentToStartDetailActivity.putExtra(Intent.EXTRA_TEXT,weatherForDay);
+        // Remember to validate if the Acitivity exists, otherwise the app will crash
+        if (intentToStartDetailActivity.resolveActivity(getPackageManager()) != null) {
+            startActivity(intentToStartDetailActivity);
+        }
     }
 
     /**
