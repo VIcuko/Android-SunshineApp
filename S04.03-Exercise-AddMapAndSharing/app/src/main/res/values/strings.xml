@@ -33,7 +33,7 @@
     </string>
 
     <!--Used in overflow menu in detailed weather data-->
-    <string name="action_share">Share</string>
+    <string name="action_share">Share Weather Details</string>
 
     <!-- - - - - - - - - - - - - -->
     <!--Used by SunshineDateUtils-->
