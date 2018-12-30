@@ -21,11 +21,11 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support:appcompat-v7:25.1.0'
+    implementation 'com.android.support:appcompat-v7:25.4.0'
 
     implementation 'com.android.support:recyclerview-v7:25.4.0'
     // TODO (1) Add preferences dependency to gradle
-    implementation 'com.android.support:preference-v7:25.0.0'
+    implementation 'com.android.support:preference-v7:25.4.0'
     // Instrumentation dependencies use androidTestImplementation
     // (as opposed to testCompile for local unit tests run in the JVM)
     androidTestImplementation 'junit:junit:4.12'
