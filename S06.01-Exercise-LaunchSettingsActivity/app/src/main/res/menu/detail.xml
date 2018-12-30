@@ -21,7 +21,7 @@
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/actioon_settings"
+        android:id="@+id/action_settings"
         android:title="@string/action_settings"
         app:showAsAction="never"
         android:launchMode="singleTop"/>
