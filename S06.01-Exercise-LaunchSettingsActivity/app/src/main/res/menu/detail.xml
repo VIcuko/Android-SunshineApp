@@ -23,7 +23,8 @@
     <item
         android:id="@+id/actioon_settings"
         android:title="@string/action_settings"
-        app:showAsAction="never" />
+        app:showAsAction="never"
+        android:launchMode="singleTop"/>
 
     <!--TODO (5) Add a Settings option to the detail menu-->
 
