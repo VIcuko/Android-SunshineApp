@@ -42,13 +42,13 @@ public class WeatherProvider extends ContentProvider {
 
 //  TODO (6) Write a method called buildUriMatcher where you match URI's to their numeric ID
 
-//  TODO (1) Implement onCreate
+//  TODO (1) Implement onCreate - Done
     @Override
     public boolean onCreate() {
-//      TODO (2) Within onCreate, instantiate our mOpenHelper
-
+//      TODO (2) Within onCreate, instantiate our mOpenHelper - Done
+        mOpenHelper = new WeatherDbHelper(getContext());
 //      TODO (3) Return true from onCreate to signify success performing setup
-        return false;
+        return true;
     }
 
     /**
