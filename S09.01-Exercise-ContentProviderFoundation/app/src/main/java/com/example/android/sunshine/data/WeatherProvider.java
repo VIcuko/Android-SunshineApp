@@ -80,7 +80,7 @@ public class WeatherProvider extends ContentProvider {
         throw new RuntimeException("Student, you need to implement the bulkInsert mehtod!");
     }
 
-//  TODO (8) Provide an implementation for the query method
+//  TODO (8) Provide an implementation for the query method - Done
     /**
      * Handles query requests from clients. We will use this method in Sunshine to query for all
      * of our weather data as well as to query for the weather on a particular day.
@@ -99,11 +99,36 @@ public class WeatherProvider extends ContentProvider {
     @Override
     public Cursor query(@NonNull Uri uri, String[] projection, String selection,
                         String[] selectionArgs, String sortOrder) {
-        throw new RuntimeException("Student, implement the query method!");
-
-//      TODO (9) Handle queries on both the weather and weather with date URI
-
-//      TODO (10) Call setNotificationUri on the cursor and then return the cursor
+        Cursor returnCursor;
+        int match = sUriMatcher.match(uri);
+        //      TODO (9) Handle queries on both the weather and weather with date URI - Done
+        switch (match){
+            case CODE_WEATHER:
+                returnCursor = mOpenHelper.getReadableDatabase().query(
+                        WeatherContract.WeatherEntry.TABLE_NAME,
+                        projection,
+                        selection,
+                        selectionArgs,
+                        null,
+                        null,
+                        sortOrder);
+                break;
+            case CODE_WEATHER_WITH_DATE:
+                returnCursor = mOpenHelper.getReadableDatabase().query(
+                        WeatherContract.WeatherEntry.TABLE_NAME,
+                        projection,
+                        WeatherContract.WeatherEntry.COLUMN_DATE + " = ? ",
+                        selectionArgs,
+                        null,
+                        null,
+                        sortOrder);
+                break;
+            default:
+                throw new UnsupportedOperationException("Unkonwn uri: " + uri);
+        }
+        //      TODO (10) Call setNotificationUri on the cursor and then return the cursor - Done
+        returnCursor.setNotificationUri(getContext().getContentResolver(),uri);
+        return returnCursor;
     }
 
     /**
