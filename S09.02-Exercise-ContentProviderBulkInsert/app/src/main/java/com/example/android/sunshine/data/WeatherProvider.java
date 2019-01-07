@@ -170,17 +170,16 @@ public class WeatherProvider extends ContentProvider {
                 }finally {
                     db.endTransaction();
                 }
-
-
-                );
+                if (rowsInserted > 0){
+                    getContext().getContentResolver().notifyChange(uri,null);
+                }
                 break;
+
             default:
-                numberOfRows = super.bulkInsert(uri,values);
-                throw new UnsupportedOperationException("Unkown uri: " + uri);
+                //          TODO (4) If the URI does match match CODE_WEATHER, return the super implementation of bulkInsert - Done
+                return super.bulkInsert(uri,values);
         }
 
-        return numberOfRows;
-//          TODO (4) If the URI does match match CODE_WEATHER, return the super implementation of bulkInsert
     }
 
     /**
