@@ -2,6 +2,7 @@ package com.example.android.sunshine.utilities;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -10,6 +11,7 @@ import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.ContextCompat;
 
+import com.example.android.sunshine.DetailActivity;
 import com.example.android.sunshine.R;
 import com.example.android.sunshine.data.WeatherContract;
 
@@ -94,7 +96,9 @@ public class NotificationUtils {
                     .setContentText(notificationText)
                     .setAutoCancel(true);
 
-//          TODO (3) Create an Intent with the proper URI to start the DetailActivity
+//          TODO (3) Create an Intent with the proper URI to start the DetailActivity - Done
+            Intent detailIntentForToday = new Intent(context, DetailActivity.class);
+            detailIntentForToday.setData(todaysWeatherUri);
 
 //          TODO (4) Use TaskStackBuilder to create the proper PendingIntent
 
