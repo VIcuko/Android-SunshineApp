@@ -9,10 +9,8 @@ public class SunshineSyncIntentService extends IntentService {
 //  TODO (6) Create a constructor that calls super and passes the name of this class - Done
     /**
      * Creates an IntentService.  Invoked by your subclass's constructor.
-     *
-     * @param name Used to name the worker thread, important only for debugging.
      */
-    public SunshineSyncIntentService(String name) {
+    public SunshineSyncIntentService() {
         super("SunshineSyncIntentService");
     }
     //  TODO (7) Override onHandleIntent, and within it, call SunshineSyncTask.syncWeather - Done
