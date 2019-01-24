@@ -18,6 +18,7 @@ package com.example.android.sunshine.sync;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
+import android.text.format.DateUtils;
 
 import com.example.android.sunshine.data.SunshinePreferences;
 import com.example.android.sunshine.data.WeatherContract;
@@ -82,7 +83,11 @@ public class SunshineSyncTask {
 
                 boolean oneDayPassedSinceLastNotification = false;
 
-//              TODO (14) Check if a day has passed since the last notification
+//              TODO (14) Check if a day has passed since the last notification - Done
+                if (timeSinceLastNotification >= DateUtils.DAY_IN_MILLIS) {
+                    oneDayPassedSinceLastNotification = true;
+                }
+
 
 //              TODO (15) If more than a day have passed and notifications are enabled, notify the user
 
