@@ -16,6 +16,7 @@ import android.support.v4.content.ContextCompat;
 
 import com.example.android.sunshine.DetailActivity;
 import com.example.android.sunshine.R;
+import com.example.android.sunshine.data.SunshinePreferences;
 import com.example.android.sunshine.data.WeatherContract;
 
 public class NotificationUtils {
@@ -119,7 +120,8 @@ public class NotificationUtils {
 //          TODO (7) Notify the user with the ID WEATHER_NOTIFICATION_ID - Done
             notificationManager.notify(WEATHER_NOTIFICATION_ID, notificationBuilder.build());
 
-//          TODO (8) Save the time at which the notification occurred using SunshinePreferences
+//          TODO (8) Save the time at which the notification occurred using SunshinePreferences - Done
+            SunshinePreferences.saveLastNotificationTime(context, System.currentTimeMillis());
         }
 
         /* Always close your cursor when you're done with it to avoid wasting resources. */
