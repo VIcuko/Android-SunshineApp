@@ -116,7 +116,8 @@ public class NotificationUtils {
             NotificationManager notificationManager = (NotificationManager)
                     context.getSystemService(Context.NOTIFICATION_SERVICE);
 
-//          TODO (7) Notify the user with the ID WEATHER_NOTIFICATION_ID
+//          TODO (7) Notify the user with the ID WEATHER_NOTIFICATION_ID - Done
+            notificationManager.notify(WEATHER_NOTIFICATION_ID, notificationBuilder.build());
 
 //          TODO (8) Save the time at which the notification occurred using SunshinePreferences
         }
