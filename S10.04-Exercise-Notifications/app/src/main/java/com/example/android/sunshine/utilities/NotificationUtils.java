@@ -1,6 +1,8 @@
 package com.example.android.sunshine.utilities;
 
 
+import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -100,7 +102,11 @@ public class NotificationUtils {
             Intent detailIntentForToday = new Intent(context, DetailActivity.class);
             detailIntentForToday.setData(todaysWeatherUri);
 
-//          TODO (4) Use TaskStackBuilder to create the proper PendingIntent
+//          TODO (4) Use TaskStackBuilder to create the proper PendingIntent - Done
+            TaskStackBuilder taskStackBuilder = TaskStackBuilder.create(context);
+            taskStackBuilder.addNextIntentWithParentStack(detailIntentForToday);
+            PendingIntent resultPendingIntent = taskStackBuilder
+                    .getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
 
 //          TODO (5) Set the content Intent of the NotificationBuilder
 
