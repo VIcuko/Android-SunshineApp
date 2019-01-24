@@ -108,7 +108,8 @@ public class NotificationUtils {
             PendingIntent resultPendingIntent = taskStackBuilder
                     .getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
 
-//          TODO (5) Set the content Intent of the NotificationBuilder
+//          TODO (5) Set the content Intent of the NotificationBuilder - Done
+            notificationBuilder.setContentIntent(resultPendingIntent);
 
 //          TODO (6) Get a reference to the NotificationManager
 
