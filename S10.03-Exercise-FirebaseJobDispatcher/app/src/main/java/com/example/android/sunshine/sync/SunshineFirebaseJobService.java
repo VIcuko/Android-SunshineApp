@@ -38,10 +38,11 @@ public class SunshineFirebaseJobService extends JobService {
             }
 
             @Override
-            protected void onPostExecute(Void aVoid) {
+            protected void onPostExecute(Object o) {
                 //  TODO (6) Once the weather data is sync'd, call jobFinished with the appropriate arguments - Done
                 jobFinished(jobParameters, false);
             }
+
         };
         mFetchWeatherTask.execute();
         return true;
