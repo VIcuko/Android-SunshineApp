@@ -34,7 +34,8 @@ public class SunshineSyncUtils {
 
     private static boolean sInitialized;
 
-//  TODO (11) Add a sync tag to identify our sync job
+//  TODO (11) Add a sync tag to identify our sync job - Done
+private static final String SUNSHINE_SYNC_TAG = "sunshine-sync";
 
 //  TODO (12) Create a method to schedule our periodic weather sync
 
