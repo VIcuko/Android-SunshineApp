@@ -22,6 +22,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.android.sunshine.utilities.SunshineDateUtils;
@@ -169,7 +170,8 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
         final TextView highTempView;
         final TextView lowTempView;
 
-//      TODO (5) Add an ImageView for the weather icon
+//      TODO (5) Add an ImageView for the weather icon - Done
+        final ImageView iconView;
 
         ForecastAdapterViewHolder(View view) {
             super(view);
