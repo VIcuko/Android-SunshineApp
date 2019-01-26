@@ -15,9 +15,9 @@
  */
 package com.example.android.sunshine;
 
-import android.databinding.DataBindingUtil;
 import android.content.Intent;
 import android.database.Cursor;
+import android.databinding.DataBindingUtil;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.LoaderManager;
@@ -28,12 +28,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 import com.example.android.sunshine.data.WeatherContract;
-import com.example.android.sunshine.databinding.ActivityMainBinding;
 import com.example.android.sunshine.utilities.SunshineDateUtils;
 import com.example.android.sunshine.utilities.SunshineWeatherUtils;
+
+import java.util.Set;
 
 public class DetailActivity extends AppCompatActivity implements
         LoaderManager.LoaderCallbacks<Cursor> {
@@ -363,7 +363,7 @@ public class DetailActivity extends AppCompatActivity implements
         mDetailBinding.extraDetails.windMeasurement.setContentDescription(windA11y);
 
 //      TODO (22) Set the content description of the wind label to the wind a11y String - Done
-        String pressureA11y = getString(R.string.a11y_pressure, pressureString);
+        mDetailBinding.extraDetails.windLabel.setContentDescription(windA11y);
 
         /************
          * Pressure *
@@ -380,7 +380,8 @@ public class DetailActivity extends AppCompatActivity implements
          */
         String pressureString = getString(R.string.format_pressure, pressure);
 
-//      TODO (23) Create the content description for the pressure for a11y
+//      TODO (23) Create the content description for the pressure for a11y - Done
+        String pressureA11y = getString(R.string.a11y_pressure, pressureString);
 
 //      TODO (14) Use mDetailBinding to display the pressure and set the content description - Done
         /* Set the text to display the pressure information */
