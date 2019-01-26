@@ -273,15 +273,15 @@ public class DetailActivity extends AppCompatActivity implements
          * Weather Description *
          ***********************/
         /* Read weather condition ID from the cursor (ID provided by Open Weather Map) */
-        int weatherId = data.getInt(INDEX_WEATHER_CONDITION_ID);
         /* Use the weatherId to obtain the proper description */
         String description = SunshineWeatherUtils.getStringForWeatherCondition(this, weatherId);
 
 //      TODO (15) Create the content description for the description for a11y
 
-//      TODO (9) Use mDetailBinding to display the description and set the content description
+//      TODO (9) Use mDetailBinding to display the description and set the content description - Done
         /* Set the text to display the description*/
-        mDescriptionView.setText(description);
+        mDetailBinding.primaryInfo.weatherDescription.setText(description);
+        mDetailBinding.primaryInfo.weatherDescription.setContentDescription(descriptionA11y);
 
 //      TODO (16) Set the content description of the icon to the same as the weather description a11y text
 
