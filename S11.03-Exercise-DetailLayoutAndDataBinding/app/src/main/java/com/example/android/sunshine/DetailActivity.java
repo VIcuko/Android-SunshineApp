@@ -15,7 +15,7 @@
  */
 package com.example.android.sunshine;
 
-import android.app.Activity;
+import android.databinding.DataBindingUtil;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
@@ -28,8 +28,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.example.android.sunshine.data.WeatherContract;
+import com.example.android.sunshine.databinding.ActivityMainBinding;
 import com.example.android.sunshine.utilities.SunshineDateUtils;
 import com.example.android.sunshine.utilities.SunshineWeatherUtils;
 
@@ -95,18 +97,18 @@ public class DetailActivity extends AppCompatActivity implements
      * in onCreate of this class. Then, we can access all of the Views in our layout
      * programmatically without cluttering up the code with findViewById.
      */
-//  TODO (3) Declare an ActivityDetailBinding field called mDetailBinding
-
+//  TODO (3) Declare an ActivityDetailBinding field called mDetailBinding - Done
+    private ActivityDetailBinding mDetailBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//      TODO (4) Remove the call to setContentView
-        setContentView(R.layout.activity_detail);
+//      TODO (4) Remove the call to setContentView - Done
 
 //      TODO (5) Remove all the findViewById calls - Done
 
-//      TODO (6) Instantiate mDetailBinding using DataBindingUtil
+//      TODO (6) Instantiate mDetailBinding using DataBindingUtil - Done
+        mDetailBinding = DataBindingUtil.setContentView(this, R.layout.activity_detail);
 
         mUri = getIntent().getData();
         if (mUri == null) throw new NullPointerException("URI for DetailActivity cannot be null");
