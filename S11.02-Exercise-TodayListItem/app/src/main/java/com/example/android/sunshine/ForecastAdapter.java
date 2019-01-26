@@ -159,7 +159,11 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
                         .getLargeArtResourceIdForWeatherCondition(weatherId);
                 break;
 
-//      TODO (16) If the view type of the layout is future day, display a small icon
+//      TODO (16) If the view type of the layout is future day, display a small icon - Done
+            case VIEW_TYPE_FUTURE_DAY:
+                weatherImageId = SunshineWeatherUtils
+                        .getSmallArtResourceIdForWeatherCondition(weatherId);
+                break;
 
 //      TODO (17) Otherwise, throw an IllegalArgumentException
 
