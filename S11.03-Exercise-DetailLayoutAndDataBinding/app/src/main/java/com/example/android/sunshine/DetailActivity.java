@@ -276,7 +276,8 @@ public class DetailActivity extends AppCompatActivity implements
         /* Use the weatherId to obtain the proper description */
         String description = SunshineWeatherUtils.getStringForWeatherCondition(this, weatherId);
 
-//      TODO (15) Create the content description for the description for a11y
+//      TODO (15) Create the content description for the description for a11y - Done
+        String descriptionA11y = getString(R.string.a11y_forecast, description);
 
 //      TODO (9) Use mDetailBinding to display the description and set the content description - Done
         /* Set the text to display the description*/
