@@ -284,7 +284,8 @@ public class DetailActivity extends AppCompatActivity implements
         mDetailBinding.primaryInfo.weatherDescription.setText(description);
         mDetailBinding.primaryInfo.weatherDescription.setContentDescription(descriptionA11y);
 
-//      TODO (16) Set the content description of the icon to the same as the weather description a11y text
+//      TODO (16) Set the content description of the icon to the same as the weather description a11y text - Done
+        mDetailBinding.primaryInfo.weatherIcon.setContentDescription(descriptionA11y);
 
         /**************************
          * High (max) temperature *
