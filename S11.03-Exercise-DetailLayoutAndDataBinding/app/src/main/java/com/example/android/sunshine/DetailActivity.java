@@ -342,7 +342,8 @@ public class DetailActivity extends AppCompatActivity implements
         mDetailBinding.extraDetails.humidity.setContentDescription(humidityA11y);
 
 
-//      TODO (19) Set the content description of the humidity label to the humidity a11y String
+//      TODO (19) Set the content description of the humidity label to the humidity a11y String - Done
+        mDetailBinding.extraDetails.humidityLabel.setContentDescription(humidityA11y);
 
         /****************************
          * Wind speed and direction *
