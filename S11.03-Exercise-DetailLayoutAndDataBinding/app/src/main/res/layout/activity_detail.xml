@@ -29,50 +29,45 @@
 
 <!-- TODO (35) Surround the entire layout with <layout/> tags for data binding - Done -->
 
-<!-- TODO (34) Create a LinearLayout to contain two included layouts that share equal space -->
+<!-- TODO (34) Create a LinearLayout to contain two included layouts that share equal space - Done -->
 
-<!-- TODO (25) Create a layout called primary_weather_info.xml -->
+<!-- TODO (25) Create a layout called primary_weather_info.xml - Don -->
 
-<!-- TODO (26) Surround the entire layout with <layout/> tags for data binding -->
+<!-- TODO (26) Surround the entire layout with <layout/> tags for data binding - Done -->
 
-<!-- TODO (27) Using ConstraintLayout, create the primary weather info layout -->
+<!-- TODO (27) Using ConstraintLayout, create the primary weather info layout - Done -->
 
-<!-- TODO (32) Include the primary_weather_info layout -->
+<!-- TODO (32) Include the primary_weather_info layout - Done -->
 
-<!-- TODO (28) Create a layout called extra_weather_details.xml -->
+<!-- TODO (28) Create a layout called extra_weather_details.xml - Done -->
 
-<!-- TODO (29) Surround the entire layout with <layout/> tags for data binding -->
+<!-- TODO (29) Surround the entire layout with <layout/> tags for data binding - Done -->
 
 <!-- TODO (30) Using ConstraintLayout, create the extra weather details layout - Done -->
 
-<!-- TODO (33) Include the extra_weather_details layout -->
+<!-- TODO (33) Include the extra_weather_details layout - Done -->
 
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <include
             android:id="@+id/primary_info"
             layout="@layout/primary_weather_info"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
         <include
             android:id="@+id/extra_details"
             layout="@layout/extra_weather_details"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
-    </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
 </layout>
