@@ -215,14 +215,17 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
         return mCursor.getCount();
     }
 
-//  TODO (9) Override getItemViewType - Done
+    //  TODO (9) Override getItemViewType - Done
     @Override
     public int getItemViewType(int position) {
-        return super.getItemViewType(position);
+        //      TODO (10) Within getItemViewType, if mUseTodayLayout is true and position is 0, return the ID for today viewType - Done
+        //      TODO (11) Otherwise, return the ID for future day viewType - Done
+        if (mUseTodayLayout && position == 0) {
+            return VIEW_TYPE_TODAY;
+        } else {
+            return VIEW_TYPE_FUTURE_DAY;
+        }
     }
-
-//      TODO (10) Within getItemViewType, if mUseTodayLayout is true and position is 0, return the ID for today viewType
-//      TODO (11) Otherwise, return the ID for future day viewType
 
     /**
      * Swaps the cursor used by the ForecastAdapter for its weather data. This method is called by
