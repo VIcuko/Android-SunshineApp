@@ -319,7 +319,8 @@ public class DetailActivity extends AppCompatActivity implements
          */
         String lowString = SunshineWeatherUtils.formatTemperature(this, lowInCelsius);
 
-//      TODO (18) Create the content description for the low temperature for a11y
+//      TODO (18) Create the content description for the low temperature for a11y - Done
+        String lowA11y = getString(R.string.a11y_low_temp, lowString);
 
 //      TODO (11) Use mDetailBinding to display the low temperature and set the content description - Done
         /* Set the text to display the low temperature */
