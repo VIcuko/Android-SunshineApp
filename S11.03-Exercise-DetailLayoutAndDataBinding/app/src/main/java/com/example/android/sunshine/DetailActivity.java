@@ -388,7 +388,8 @@ public class DetailActivity extends AppCompatActivity implements
         mDetailBinding.extraDetails.pressure.setText(pressureString);
         mDetailBinding.extraDetails.pressure.setContentDescription(pressureA11y);
 
-//      TODO (24) Set the content description of the pressure label to the pressure a11y String
+//      TODO (24) Set the content description of the pressure label to the pressure a11y String - Done
+        mDetailBinding.extraDetails.pressureLabel.setContentDescription(pressureA11y);
 
         /* Store the forecast summary String in our forecast summary field to share later */
         mForecastSummary = String.format("%s - %s - %s/%s",
