@@ -114,7 +114,10 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
         }
 
 
-//      TODO (14) Otherwise, throw an IllegalArgumentException
+//      TODO (14) Otherwise, throw an IllegalArgumentException - Done
+        default:
+        throw new IllegalArgumentException("Invalid view type, value of " + viewType);
+    }
 
         View view = LayoutInflater
                 .from(mContext)
