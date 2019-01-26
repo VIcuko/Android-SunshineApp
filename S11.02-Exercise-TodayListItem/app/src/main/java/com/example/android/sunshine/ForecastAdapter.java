@@ -150,7 +150,14 @@ class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastAdapt
         int weatherId = mCursor.getInt(MainActivity.INDEX_WEATHER_CONDITION_ID);
         int weatherImageId;
 
-//      TODO (15) If the view type of the layout is today, display a large icon
+        int viewType = getItemViewType(position);
+
+        switch (viewType) {
+//      TODO (15) If the view type of the layout is today, display a large icon - Done
+            case VIEW_TYPE_TODAY:
+                weatherImageId = SunshineWeatherUtils
+                        .getLargeArtResourceIdForWeatherCondition(weatherId);
+                break;
 
 //      TODO (16) If the view type of the layout is future day, display a small icon
 
