@@ -362,7 +362,8 @@ public class DetailActivity extends AppCompatActivity implements
         mDetailBinding.extraDetails.windMeasurement.setText(windString);
         mDetailBinding.extraDetails.windMeasurement.setContentDescription(windA11y);
 
-//      TODO (22) Set the content description of the wind label to the wind a11y String
+//      TODO (22) Set the content description of the wind label to the wind a11y String - Done
+        String pressureA11y = getString(R.string.a11y_pressure, pressureString);
 
         /************
          * Pressure *
