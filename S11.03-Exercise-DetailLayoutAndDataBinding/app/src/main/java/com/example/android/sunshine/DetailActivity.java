@@ -350,9 +350,10 @@ public class DetailActivity extends AppCompatActivity implements
 
 //      TODO (21) Create the content description for the wind for a11y
 
-//      TODO (13) Use mDetailBinding to display the wind and set the content description
+//      TODO (13) Use mDetailBinding to display the wind and set the content description - Done
         /* Set the text to display wind information */
-        mWindView.setText(windString);
+        mDetailBinding.extraDetails.windMeasurement.setText(windString);
+        mDetailBinding.extraDetails.windMeasurement.setContentDescription(windA11y);
 
 //      TODO (22) Set the content description of the wind label to the wind a11y String
 
