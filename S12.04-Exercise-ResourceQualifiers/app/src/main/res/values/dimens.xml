@@ -16,7 +16,7 @@
 -->
 
 <!-- TODO (1) Create the version of dimens that will be used in landscape mode - Done -->
-<!-- TODO (2) Create the version of dimens that will be used when the smallest width of the screen is 600dp -->
+<!-- TODO (2) Create the version of dimens that will be used when the smallest width of the screen is 600dp - Done -->
 
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
